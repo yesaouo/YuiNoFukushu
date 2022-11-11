@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+body{
+    font-size: 20px;
+    text-align: center;
+    font-family: "cwTeXFangSong", serif;
+    background-color: cornflowerblue;
+    background-position: center;
+    background-size: cover;
+    background-image: url("others/role_bg05.png");
+}
+#start{
+    position: fixed;
+    top: 0%; left: 0%;
+    height: 100%; width: 100%;
+    background-color: gray;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("others/start.png");
+    z-index: 1000;
+}
+#dice{
+    position: fixed;
+    top: 0%; left: 0%;
+    height: 100%; width: 100%;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("others/dice.gif");
+    z-index: 999;
+}
+#win{
+    position: absolute;
+    top: 0%; left: 0%;
+    height: 60%; width: 100%;
+    background-color: lightgreen;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("others/win.png");
+    z-index: 998;
+}
+#lose{
+    position: absolute;
+    top: 0%; left: 0%;
+    height: 60%; width: 100%;
+    background-color: lightcoral;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("others/lose.png");
+    z-index: 998;
+}
+.flex-container {
+    display: flex;
+    height: 500px;
+    flex-wrap: nowrap;
+}
+#game{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+}
+#game>div{
+    position: relative;
+    top: -5px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid black;
+}
+.button{
+    width: 30%;
+    background-color: antiquewhite;
+    border: 5px solid black;
+}
+#screen{
+    height: 75%;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("others/ft_bg.png");
+}
+#text{
+    height: 25%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0% 5%;
+    word-wrap: break-word;
+    background-color: antiquewhite;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("others/180231.png");
+}
+#controller{
+    position: relative;
+    top: 5%; left: 10%;
+    height: 80%; width: 70%;
+    padding: 5% ;
+    border-radius: 10px;
+    background-color: rgba(0, 85, 116, 0.7);
+    text-align: center;
+    font-size: 0.8em;
+    z-index: 1;
+    border: 2px solid black;
+}
+#controller .choose-btn{
+    display: inline-block;
+    padding: 8px 36px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:orange;
+    margin-top: 24%;
+    box-shadow: 3px 3px 3px #6F6767;
+    z-index: 3;
+    text-decoration: none;
+}
+#controller .choose-btn:hover{
+    color: red;
+    font-size: 1.6em;
+}
+#atkbtn{background-color: black;}
+#defbtn{background-color: green;}
+#recbtn{background-color: blue;}
+#ntnbtn, #rbtbtn{background-color: antiquewhite;}
+#player1{
+    position: absolute;
+    background-image: url("character/p1_0.png");
+    padding: 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#player2{
+    position: absolute;
+    background-image: url("character/e1_0.png");
+    padding: 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#player1-choose{
+    position: absolute;
+    top: 75%;
+    padding: 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#player2-choose{
+    position: absolute;
+    top: 75%;
+    padding: 50%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#music{
+    position: absolute;
+    height: 20px; width: 100px;
+    background-color: #6F6767;
+    border-radius: 100px;
+    z-index: 1;
+}
+#music .choose-btn{
+    position: absolute;
+    top: 1px;
+    height: 18px; width: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+#music #prevbtn{
+    left: 0px;
+    background-image: url(music/previous.png);
+}
+#music #playbtn{
+    left: 40px;
+    background-image: url(music/play.png);
+}
+#music #nextbtn{
+    left: 80px;
+    background-image: url(music/next.png);
+}
+@media screen and (min-width: 600px) and (max-width: 720px){
+    #screen{background-size: contain;}
+    #controller{font-size: 0.6em;}
+}
+@media screen and (max-width: 600px){
+    .flex-container{flex-wrap: wrap;}
+    #game{
+        width: 100%;height: 115%;
+        border: none;
+    }
+    .button{width: 100%;height: 45%;}
+    #screen{background-size: contain;}
+    #controller{width: 86%; height: 65%; left: 2%;}
+    #controller .choose-btn{margin-top: 5%;}
+    #game>div, .button{border: 4px solid black;}
+}
+@media screen and (max-width: 440px){
+    #controller .choose-btn{padding: 8px 24px;}
+}
