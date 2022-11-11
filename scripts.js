@@ -348,15 +348,6 @@ var start=document.getElementById("start");
 var dice=document.getElementById("dice");
 var player1_choose=document.getElementById("player1-choose");
 var player2_choose=document.getElementById("player2-choose");
-start.onclick = function(event){
-    Reboot();
-    RePlace();
-    DrawHpPP();
-    Character();
-    PlayAudio();
-    alert("遊戲開始");
-    start.style.display="none";
-}
 //screen
 var screen=document.getElementById("screen");
 var board=document.getElementById("board");
@@ -420,6 +411,14 @@ window.onresize=()=>{
 }
 //load
 function Start(){
-    start.style.display="";
+    start.onclick = function(event){
+        Reboot();
+        RePlace();
+        DrawHpPP();
+        Character();
+        PlayAudio();
+        alert("遊戲開始");
+        start.style.display="none";
+    }
 }
 window.addEventListener("load",Start,false);
