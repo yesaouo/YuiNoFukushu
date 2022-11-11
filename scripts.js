@@ -6,7 +6,7 @@ var nextbtn=document.getElementById("nextbtn");
 const audio=document.createElement("audio");
 var song=1,play=false;
 audio.src="music/"+song+".mp3";
-audio.volume=0.2;
+audio.volume=0.1;
 audio.loop=true;
 function PlayAudio(){
     audio.play();
