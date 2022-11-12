@@ -57,23 +57,25 @@ body{
     height: 500px;
     flex-wrap: nowrap;
 }
-#game{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    border: 5px solid black;
-}
-#game>div{
-    position: relative;
-    top: -5px;
-    width: 100%;
-    text-align: left;
-    border: 2px solid black;
-}
 .button{
     width: 30%;
     background-color: antiquewhite;
     border: 5px solid black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#game{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 5px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+#game>div{
+    position: relative;
+    width: 100%;
 }
 #screen{
     height: 75%;
@@ -83,6 +85,9 @@ body{
     background-image: url("others/ft_bg.png");
 }
 #text{
+    border-top: 5px solid black;
+    top: -5px;
+    text-align: left;
     height: 25%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -96,15 +101,13 @@ body{
 }
 #controller{
     position: relative;
-    top: 5%; left: 10%;
     height: 80%; width: 70%;
-    padding: 5% ;
     border-radius: 10px;
     background-color: rgba(0, 85, 116, 0.7);
     text-align: center;
     font-size: 0.8em;
-    z-index: 1;
     border: 2px solid black;
+    z-index: 1;
 }
 #controller .choose-btn{
     display: inline-block;
@@ -126,30 +129,30 @@ body{
 #recbtn{background-color: blue;}
 #ntnbtn, #rbtbtn{background-color: antiquewhite;}
 #player1{
+    height: 150px; width: 120px;
     position: absolute;
     background-image: url("character/p1_0.png");
-    padding: 50%;
     background-repeat: no-repeat;
     z-index: 0;
 }
 #player2{
+    height: 150px; width: 120px;
     position: absolute;
     background-image: url("character/e1_0.png");
-    padding: 50%;
     background-repeat: no-repeat;
     z-index: 0;
 }
 #player1-choose{
+    height: 64px; width: 64px;
     position: absolute;
     top: 75%;
-    padding: 50%;
     background-repeat: no-repeat;
     z-index: 0;
 }
 #player2-choose{
+    height: 64px; width: 64px;
     position: absolute;
     top: 75%;
-    padding: 50%;
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -186,15 +189,11 @@ body{
 }
 @media screen and (max-width: 600px){
     .flex-container{flex-wrap: wrap;}
-    #game{
-        width: 100%;height: 115%;
-        border: none;
-    }
     .button{width: 100%;height: 45%;}
-    #screen{background-size: contain;}
-    #controller{width: 86%; height: 65%; left: 2%;}
+    #game{width: 100%;height: 115%; border: none;}
+    #screen{background-size: contain; border-top: 5px solid black;}
+    #controller{width: 86%; height: 65%;}
     #controller .choose-btn{margin-top: 5%;}
-    #game>div, .button{border: 4px solid black;}
 }
 @media screen and (max-width: 440px){
     #controller .choose-btn{padding: 8px 24px;}
