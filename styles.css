@@ -189,7 +189,12 @@ body{
 }
 @media screen and (max-width: 600px){
     .flex-container{flex-wrap: wrap;}
-    .button{width: 100%;height: 45%;}
+    .button{width: 100%;
+            height: 45%;
+            border: none; 
+            border-bottom: 5px solid black;
+            }
+    #text{border-bottom: 5px solid black;}
     #game{width: 100%;height: 115%; border: none;}
     #screen{background-size: contain; border-top: 5px solid black;}
     #controller{width: 86%; height: 65%;}
