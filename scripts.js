@@ -402,9 +402,9 @@ function RePlace(){
     music.style.top=(shei/7)+'px';
     music.style.left=(swid/2-50)+'px';
     player1.style.top=(shei-150)+'px';
-    player1.style.left='50px';
+    player1.style.left=(swid/5-50)+'px';
     player2.style.top=(shei-150)+'px';
-    player2.style.left=(swid-170)+'px';
+    player2.style.left=(swid-70-swid/5)+'px';
 }
 window.onresize=()=>{
     RePlace();
